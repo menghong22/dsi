@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // For sqrt()
+#include <cmath> 
 using namespace std;
 
 void solveEquation(int a, int b, int c, float *x1, float *x2, float *delta) {

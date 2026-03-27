@@ -2,12 +2,11 @@
 using namespace std;
 
 void findMaxMin(int* arr, int *max, int *min) {
-    // Initialize max and min with the first element
     *max = *arr;
     *min = *arr;
 
     for (int i = 1; i < 7; i++) {
-        // Accessing elements using pointer arithmetic
+
         if (*(arr + i) > *max) {
             *max = *(arr + i);
         }
@@ -26,7 +25,6 @@ int main() {
         cin >> numbers[i];
     }
 
-    // Pass the array and the addresses of maxValue and minValue
     findMaxMin(numbers, &maxValue, &minValue);
 
     cout << "Max: " << maxValue << endl;
