@@ -40,4 +40,35 @@ class ArrayStack{
             return (top<0);
         }
 
+        bool isFull(){
+            return (top>= MAX-1);
+        }
+
+        void displayStack(){
+            if (isEmpty()){
+                cout<<"Stack is empty."<<endl;
+                return;
+            }
+            cout<<"Stack elements (top to bottom)";
+            for(int i=top; i>=0; i--){
+                cout<<arr[i]<<" ";
+            }
+            cout<<endl;
+        }
 };
+
+int main(){
+    ArrayStack stack;
+
+    cout <<"--- Testing Array-Vased Stack ---"<<endl;
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+    stack.displayStack();
+
+    cout<<"Peek top element: "<<stack.peek()<<endl;
+    cout<<"Popped: " <<stack.pop()<<endl;
+    stack.displayStack();
+
+    return 0;
+}
